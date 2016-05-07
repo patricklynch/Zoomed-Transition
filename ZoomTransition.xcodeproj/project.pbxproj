@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A745A44A1CDD695800DBD2F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A745A4491CDD695800DBD2F4 /* AppDelegate.swift */; };
+		A745A44C1CDD695800DBD2F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A745A44B1CDD695800DBD2F4 /* ViewController.swift */; };
+		A745A44F1CDD695800DBD2F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A745A44D1CDD695800DBD2F4 /* Main.storyboard */; };
+		A745A4511CDD695800DBD2F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A745A4501CDD695800DBD2F4 /* Assets.xcassets */; };
+		A745A4541CDD695800DBD2F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A745A4521CDD695800DBD2F4 /* LaunchScreen.storyboard */; };
+		A745A45C1CDD787700DBD2F4 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A745A45B1CDD787700DBD2F4 /* CustomTransition.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A745A4461CDD695800DBD2F4 /* ZoomTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoomTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A745A4491CDD695800DBD2F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A745A44B1CDD695800DBD2F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A745A44E1CDD695800DBD2F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A745A4501CDD695800DBD2F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A745A4531CDD695800DBD2F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A745A4551CDD695800DBD2F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A745A45B1CDD787700DBD2F4 /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A745A4431CDD695800DBD2F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A745A43D1CDD695800DBD2F4 = {
+			isa = PBXGroup;
+			children = (
+				A745A4481CDD695800DBD2F4 /* ZoomTransition */,
+				A745A4471CDD695800DBD2F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A745A4471CDD695800DBD2F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A745A4461CDD695800DBD2F4 /* ZoomTransition.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A745A4481CDD695800DBD2F4 /* ZoomTransition */ = {
+			isa = PBXGroup;
+			children = (
+				A745A4491CDD695800DBD2F4 /* AppDelegate.swift */,
+				A745A44B1CDD695800DBD2F4 /* ViewController.swift */,
+				A745A45B1CDD787700DBD2F4 /* CustomTransition.swift */,
+				A745A44D1CDD695800DBD2F4 /* Main.storyboard */,
+				A745A4501CDD695800DBD2F4 /* Assets.xcassets */,
+				A745A4521CDD695800DBD2F4 /* LaunchScreen.storyboard */,
+				A745A4551CDD695800DBD2F4 /* Info.plist */,
+			);
+			path = ZoomTransition;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A745A4451CDD695800DBD2F4 /* ZoomTransition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A745A4581CDD695800DBD2F4 /* Build configuration list for PBXNativeTarget "ZoomTransition" */;
+			buildPhases = (
+				A745A4421CDD695800DBD2F4 /* Sources */,
+				A745A4431CDD695800DBD2F4 /* Frameworks */,
+				A745A4441CDD695800DBD2F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZoomTransition;
+			productName = ZoomTransition;
+			productReference = A745A4461CDD695800DBD2F4 /* ZoomTransition.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A745A43E1CDD695800DBD2F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = lynchdev;
+				TargetAttributes = {
+					A745A4451CDD695800DBD2F4 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = A745A4411CDD695800DBD2F4 /* Build configuration list for PBXProject "ZoomTransition" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A745A43D1CDD695800DBD2F4;
+			productRefGroup = A745A4471CDD695800DBD2F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A745A4451CDD695800DBD2F4 /* ZoomTransition */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A745A4441CDD695800DBD2F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A745A4541CDD695800DBD2F4 /* LaunchScreen.storyboard in Resources */,
+				A745A4511CDD695800DBD2F4 /* Assets.xcassets in Resources */,
+				A745A44F1CDD695800DBD2F4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A745A4421CDD695800DBD2F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A745A44C1CDD695800DBD2F4 /* ViewController.swift in Sources */,
+				A745A45C1CDD787700DBD2F4 /* CustomTransition.swift in Sources */,
+				A745A44A1CDD695800DBD2F4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A745A44D1CDD695800DBD2F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A745A44E1CDD695800DBD2F4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A745A4521CDD695800DBD2F4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A745A4531CDD695800DBD2F4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A745A4561CDD695800DBD2F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A745A4571CDD695800DBD2F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A745A4591CDD695800DBD2F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZoomTransition/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lynchdev.ZoomTransition;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A745A45A1CDD695800DBD2F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZoomTransition/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lynchdev.ZoomTransition;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A745A4411CDD695800DBD2F4 /* Build configuration list for PBXProject "ZoomTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A745A4561CDD695800DBD2F4 /* Debug */,
+				A745A4571CDD695800DBD2F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A745A4581CDD695800DBD2F4 /* Build configuration list for PBXNativeTarget "ZoomTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A745A4591CDD695800DBD2F4 /* Debug */,
+				A745A45A1CDD695800DBD2F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A745A43E1CDD695800DBD2F4 /* Project object */;
+}
