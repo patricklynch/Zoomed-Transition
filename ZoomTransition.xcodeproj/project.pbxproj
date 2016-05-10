@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		A745A44A1CDD695800DBD2F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A745A4491CDD695800DBD2F4 /* AppDelegate.swift */; };
-		A745A44C1CDD695800DBD2F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A745A44B1CDD695800DBD2F4 /* ViewController.swift */; };
+		A745A44C1CDD695800DBD2F4 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A745A44B1CDD695800DBD2F4 /* ViewControllers.swift */; };
 		A745A44F1CDD695800DBD2F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A745A44D1CDD695800DBD2F4 /* Main.storyboard */; };
 		A745A4511CDD695800DBD2F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A745A4501CDD695800DBD2F4 /* Assets.xcassets */; };
 		A745A4541CDD695800DBD2F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A745A4521CDD695800DBD2F4 /* LaunchScreen.storyboard */; };
 		A745A45C1CDD787700DBD2F4 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A745A45B1CDD787700DBD2F4 /* CustomTransition.swift */; };
+		A7EA683C1CE174BC00BE60C9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EA683B1CE174BC00BE60C9 /* Utils.swift */; };
+		A7EA683E1CE174D000BE60C9 /* ZoomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EA683D1CE174D000BE60C9 /* ZoomTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A745A4461CDD695800DBD2F4 /* ZoomTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoomTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A745A4491CDD695800DBD2F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A745A44B1CDD695800DBD2F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A745A44B1CDD695800DBD2F4 /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		A745A44E1CDD695800DBD2F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A745A4501CDD695800DBD2F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A745A4531CDD695800DBD2F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A745A4551CDD695800DBD2F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A745A45B1CDD787700DBD2F4 /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
+		A7EA683B1CE174BC00BE60C9 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A7EA683D1CE174D000BE60C9 /* ZoomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				A745A4491CDD695800DBD2F4 /* AppDelegate.swift */,
-				A745A44B1CDD695800DBD2F4 /* ViewController.swift */,
-				A745A45B1CDD787700DBD2F4 /* CustomTransition.swift */,
-				A745A44D1CDD695800DBD2F4 /* Main.storyboard */,
 				A745A4501CDD695800DBD2F4 /* Assets.xcassets */,
-				A745A4521CDD695800DBD2F4 /* LaunchScreen.storyboard */,
+				A745A45B1CDD787700DBD2F4 /* CustomTransition.swift */,
 				A745A4551CDD695800DBD2F4 /* Info.plist */,
+				A745A4521CDD695800DBD2F4 /* LaunchScreen.storyboard */,
+				A745A44D1CDD695800DBD2F4 /* Main.storyboard */,
+				A7EA683B1CE174BC00BE60C9 /* Utils.swift */,
+				A745A44B1CDD695800DBD2F4 /* ViewControllers.swift */,
+				A7EA683D1CE174D000BE60C9 /* ZoomTransition.swift */,
 			);
 			path = ZoomTransition;
 			sourceTree = "<group>";
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A745A44C1CDD695800DBD2F4 /* ViewController.swift in Sources */,
+				A745A44C1CDD695800DBD2F4 /* ViewControllers.swift in Sources */,
 				A745A45C1CDD787700DBD2F4 /* CustomTransition.swift in Sources */,
 				A745A44A1CDD695800DBD2F4 /* AppDelegate.swift in Sources */,
+				A7EA683E1CE174D000BE60C9 /* ZoomTransition.swift in Sources */,
+				A7EA683C1CE174BC00BE60C9 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +300,7 @@
 				A745A45A1CDD695800DBD2F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

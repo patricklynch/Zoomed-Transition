@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="852" y="296"/>
         </scene>
-        <!--View Controller-->
+        <!--Origin View Controller-->
         <scene sceneID="ukJ-pJ-QPX">
             <objects>
-                <viewController id="PiR-4V-B79" customClass="ViewController" customModule="ZoomTransition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PiR-4V-B79" customClass="OriginViewController" customModule="ZoomTransition" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="quY-t4-0E0"/>
                         <viewControllerLayoutGuide type="bottom" id="bgF-xA-3Zi"/>
@@ -34,21 +34,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDa-pP-DV6">
-                                <rect key="frame" x="141" y="262" width="319" height="76"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="141" y="312" width="319" height="76"/>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="046-K1-43r"/>
                                     <constraint firstAttribute="width" constant="319" id="9hD-Nt-dJ7"/>
                                 </constraints>
-                                <state key="normal" title="Do It"/>
+                                <state key="normal" title="PRESENT">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="onTransition" destination="PiR-4V-B79" eventType="touchUpInside" id="ukd-rc-Gpi"/>
+                                    <action selector="onPresent" destination="PiR-4V-B79" eventType="touchUpInside" id="04f-Jx-hhO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GND-rf-dl2">
+                                <rect key="frame" x="141" y="212" width="319" height="76"/>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="PUv-T7-tdt"/>
+                                    <constraint firstAttribute="width" constant="319" id="soC-H1-9Sv"/>
+                                </constraints>
+                                <state key="normal" title="PUSH">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPush" destination="PiR-4V-B79" eventType="touchUpInside" id="Zhk-td-kcV"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92297979797979801" green="0.92297979797979801" blue="0.92297979797979801" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="fDa-pP-DV6" firstAttribute="centerY" secondItem="s8y-XG-zVJ" secondAttribute="centerY" id="7bi-zC-sv1"/>
+                            <constraint firstItem="fDa-pP-DV6" firstAttribute="centerY" secondItem="s8y-XG-zVJ" secondAttribute="centerY" constant="50" id="7bi-zC-sv1"/>
+                            <constraint firstItem="GND-rf-dl2" firstAttribute="centerX" secondItem="s8y-XG-zVJ" secondAttribute="centerX" id="DfT-Bt-k3P"/>
+                            <constraint firstItem="GND-rf-dl2" firstAttribute="centerY" secondItem="s8y-XG-zVJ" secondAttribute="centerY" constant="-50" id="Rls-dy-Vxt"/>
                             <constraint firstItem="fDa-pP-DV6" firstAttribute="centerX" secondItem="s8y-XG-zVJ" secondAttribute="centerX" id="XJ2-oK-Z6P"/>
                         </constraints>
                     </view>
@@ -58,6 +76,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXk-c6-5yJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1544" y="296"/>
+        </scene>
+        <!--Destination View Controller-->
+        <scene sceneID="mpK-uL-Pug">
+            <objects>
+                <viewController storyboardIdentifier="ZoomedViewController" id="aLc-CK-tdY" customClass="DestinationViewController" customModule="ZoomTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kcm-V9-pbK"/>
+                        <viewControllerLayoutGuide type="bottom" id="6rb-8q-9Jj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="92i-cY-d1g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lv8-lk-xu7">
+                                <rect key="frame" x="141" y="262" width="319" height="76"/>
+                                <color key="backgroundColor" red="0.75962087519491384" green="0.94775883838383834" blue="0.92046978348364084" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="EPC-k5-YEl"/>
+                                    <constraint firstAttribute="width" constant="319" id="YxK-qG-NQI"/>
+                                </constraints>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBack" destination="aLc-CK-tdY" eventType="touchUpInside" id="97R-pC-bDV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90025500437924788" green="0.99165978721966963" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lv8-lk-xu7" firstAttribute="centerX" secondItem="92i-cY-d1g" secondAttribute="centerX" id="1FT-pw-11g"/>
+                            <constraint firstItem="lv8-lk-xu7" firstAttribute="centerY" secondItem="92i-cY-d1g" secondAttribute="centerY" id="mNr-Nm-bIV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8k-Pn-tD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2218" y="296"/>
         </scene>
     </scenes>
 </document>

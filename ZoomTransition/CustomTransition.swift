@@ -72,7 +72,7 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             container.addSubview(model.toViewController.view)
             
             transition.performTransitionIn(model) { completed in
-                transitionContext.completeTransition(transitionContext.transitionWasCancelled())
+                transitionContext.completeTransition( !transitionContext.transitionWasCancelled() )
             }
             
         } else {
@@ -82,7 +82,7 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             container.addSubview(model.fromViewController.view)
             
             transition.performTransitionOut(model) { completed in
-                transitionContext.completeTransition(transitionContext.transitionWasCancelled())
+                transitionContext.completeTransition( !transitionContext.transitionWasCancelled() )
             }
         }
     }
@@ -96,7 +96,7 @@ class TransitionDelegate: NSObject, UIViewControllerTransitioningDelegate, UINav
         self.animator = TransitionAnimator(transition: transition)
     }
     
-    // MARK: - FUCK
+    // MARK: - UIViewControllerTransitioningDelegate
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return animator
@@ -105,6 +105,8 @@ class TransitionDelegate: NSObject, UIViewControllerTransitioningDelegate, UINav
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return animator
     }
+    
+    // MARK: - UINavigationControllerDelegate
     
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return animator
