@@ -9,9 +9,9 @@
 import UIKit
 
 protocol Transition {
-    var animationDuration: NSTimeInterval { get }
-    func performTransitionIn(model: TransitionModel, completion: (Bool)->())
-    func performTransitionOut(model: TransitionModel, completion: (Bool)->())
+    var animationDuration: TimeInterval { get }
+    func performTransitionIn(_ model: TransitionModel, completion: @escaping (Bool)->())
+    func performTransitionOut(_ model: TransitionModel, completion: @escaping (Bool)->())
 }
 
 struct TransitionModel {
@@ -24,8 +24,8 @@ struct TransitionModel {
     init(context: UIViewControllerContextTransitioning, transition: Transition) {
         self.context = context
         self.transition = transition
-        guard let toViewController = context.viewControllerForKey(UITransitionContextToViewControllerKey),
-            let fromViewController = context.viewControllerForKey(UITransitionContextFromViewControllerKey) else {
+        guard let toViewController = context.viewController(forKey: UITransitionContextViewControllerKey.to),
+            let fromViewController = context.viewController(forKey: UITransitionContextViewControllerKey.from) else {
                 abort()
         }
         
@@ -33,7 +33,7 @@ struct TransitionModel {
         self.fromViewController = fromViewController
         
         let modal = toViewController.presentedViewController != nil || fromViewController.presentedViewController != nil
-        if let fromNav = fromViewController.navigationController where !modal {
+        if let fromNav = fromViewController.navigationController , !modal {
             presenting = fromNav.viewControllers.contains(fromViewController)
         } else {
             presenting = toViewController.presentedViewController != fromViewController
@@ -51,38 +51,36 @@ class TransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     // MARK: - UIViewControllerAnimatedTransitioning
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return transition.animationDuration
     }
     
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let model = TransitionModel(
             context: transitionContext,
             transition: transition
         )
         
-        guard let container = transitionContext.containerView() else {
-            abort()
-        }
+        let containerView = transitionContext.containerView
         
         if model.presenting {
             model.toViewController.view.frame = model.fromViewController.view.frame
             
-            container.addSubview(model.fromViewController.view)
-            container.addSubview(model.toViewController.view)
+            containerView.addSubview(model.fromViewController.view)
+            containerView.addSubview(model.toViewController.view)
             
             transition.performTransitionIn(model) { completed in
-                transitionContext.completeTransition( !transitionContext.transitionWasCancelled() )
+                transitionContext.completeTransition( !transitionContext.transitionWasCancelled )
             }
             
         } else {
             model.fromViewController.view.frame = model.toViewController.view.frame
             
-            container.addSubview(model.toViewController.view)
-            container.addSubview(model.fromViewController.view)
+            containerView.addSubview(model.toViewController.view)
+            containerView.addSubview(model.fromViewController.view)
             
             transition.performTransitionOut(model) { completed in
-                transitionContext.completeTransition( !transitionContext.transitionWasCancelled() )
+                transitionContext.completeTransition( !transitionContext.transitionWasCancelled )
             }
         }
     }
@@ -98,17 +96,17 @@ class TransitionDelegate: NSObject, UIViewControllerTransitioningDelegate, UINav
     
     // MARK: - UIViewControllerTransitioningDelegate
     
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return animator
     }
     
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return animator
     }
     
     // MARK: - UINavigationControllerDelegate
     
-    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return animator
     }
 }

@@ -8,19 +8,19 @@
 
 import UIKit
 
-func dispatch_after( delay: NSTimeInterval, _ closure: () -> () ) {
-    let time = dispatch_time( DISPATCH_TIME_NOW,  Int64(delay * Double(NSEC_PER_SEC)) )
-    dispatch_after( time, dispatch_get_main_queue(), closure)
+func dispatch_after( _ delay: TimeInterval, _ closure: @escaping () -> () ) {
+    let time = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+    DispatchQueue.main.asyncAfter( deadline: time, execute: closure)
 }
 
 extension UIViewController {
-    static func fromStoryboard<T: UIViewController>( storyboardName: String? = nil, identifier: String? = nil) -> T {
-        let storyboard = UIStoryboard(name: storyboardName ?? String(self), bundle: nil )
-        return storyboard.instantiateViewControllerWithIdentifier( identifier ?? String(self) ) as! T
+    static func fromStoryboard<T: UIViewController>( _ storyboardName: String? = nil, identifier: String? = nil) -> T {
+        let storyboard = UIStoryboard(name: storyboardName ?? String(describing: self), bundle: nil )
+        return storyboard.instantiateViewController( withIdentifier: identifier ?? String(describing: self) ) as! T
     }
     
-    static func initialViewControllerFromStoryboard<T: UIViewController>( storyboardName: String? = nil ) -> T {
-        let storyboard = UIStoryboard(name: storyboardName ?? String(self), bundle: nil )
+    static func initialViewControllerFromStoryboard<T: UIViewController>( _ storyboardName: String? = nil ) -> T {
+        let storyboard = UIStoryboard(name: storyboardName ?? String(describing: self), bundle: nil )
         return storyboard.instantiateInitialViewController() as! T
     }
 }

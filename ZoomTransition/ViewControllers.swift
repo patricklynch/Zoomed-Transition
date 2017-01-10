@@ -13,7 +13,7 @@ class OriginViewController: UIViewController {
     let transitionDelegate = TransitionDelegate(transition: ZoomTransition())
     let vc = UIViewController.fromStoryboard("Main", identifier: "ZoomedViewController")
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -21,7 +21,7 @@ class OriginViewController: UIViewController {
     
     @IBAction func onPresent() {
         vc.transitioningDelegate = self.transitionDelegate
-        presentViewController(vc, animated: true, completion: nil)
+        present(vc, animated: true, completion: nil)
     }
     
     @IBAction func onPush() {
@@ -35,7 +35,7 @@ class DestinationViewController: UIViewController {
     
     let transitionDelegate = TransitionDelegate(transition: ZoomTransition())
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -43,9 +43,9 @@ class DestinationViewController: UIViewController {
     
     @IBAction func onBack() {
         if let navigationController = navigationController {
-            navigationController.popViewControllerAnimated(true)
+            navigationController.popViewController(animated: true)
         } else {
-            dismissViewControllerAnimated(true, completion: nil)
+            dismiss(animated: true, completion: nil)
         }
     }
 }
