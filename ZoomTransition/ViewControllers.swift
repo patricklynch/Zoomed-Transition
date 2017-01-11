@@ -33,8 +33,6 @@ class OriginViewController: UIViewController {
 
 class DestinationViewController: UIViewController {
     
-    let transitionDelegate = TransitionDelegate(transition: ZoomTransition())
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
